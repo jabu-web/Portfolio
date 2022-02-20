@@ -7,16 +7,17 @@
 :root {
   font-family: "Roboto", sans-serif;
   --fw-reg: 400;
+  --fw-mid: 500;
   --fw-bold: 900;
 
   --orange: #ff7300;
   --blue: #0062ab;
-  --white: #fef9f8;
+  --white: #f8f9fa;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-p: 1rem;
 }
 
 @media (min-width: 800px) {
@@ -24,9 +25,24 @@
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
-    --fs-body: 1.125rem;
+    --fs-p: 1.125rem;
   }
 }
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+p {
+  font-size: var(--fs-p);
+}
+
+/* nav bar */
 
 ul {
   background-color: var(--orange);
@@ -42,7 +58,7 @@ ul {
 .nav-left {
   float: left;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: var(--fw-mid);
 }
 
 .nav-right {
@@ -67,5 +83,88 @@ li a {
 }
 
 .nav-link:active {
+  background-color: black;
+}
+
+/* home section */
+
+section {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.home {
+  margin-top: 10em;
+  display: flex;
+}
+
+/* projects section */
+
+.section-title {
+  text-align: center;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 4em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--orange);
+}
+
+.description {
+  text-align: center;
+}
+
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 60em;
+  margin: auto;
+}
+
+.portfolio-img {
+  width: 20em;
+  height: 20em;
+}
+
+/* contact section */
+
+form {
+  border: 1px solid #888888;
+  border-radius: 1%;
+  width: 25em;
+  padding: 1em;
+  margin: auto;
+  margin-bottom: 10em;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 0.7em;
+}
+
+.form-input {
+  width: 100%;
+  resize: vertical;
+}
+
+.fi {
+  height: 2em;
+}
+
+button {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 0;
+  box-shadow: none;
+  border-radius: 2px;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+button:hover {
   background-color: black;
 }
