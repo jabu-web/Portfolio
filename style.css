@@ -20,7 +20,7 @@
   --fs-p: 1rem;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
@@ -89,8 +89,8 @@ li a {
 /* home section */
 
 section {
-  width: 50%;
-  margin-left: 25%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .home {
@@ -99,13 +99,54 @@ section {
   justify-content: center;
 }
 .intro {
-  min-width: 2.8em;
-  max-width: 2.8em;
+  min-width: 3em;
+  max-width: 3em;
+  border-right: solid 1px var(--orange);
 }
 
 .about {
   min-width: 5em;
-  width: 20em;
+  width: 16em;
+  padding-left: 1em;
+  padding-top: 1.15em;
+}
+
+.profile-img {
+  display: block;
+  max-width: 200px;
+  margin: auto;
+  padding-bottom: 16em;
+}
+
+@media (max-width: 900px) {
+  .home {
+    display: block;
+  }
+
+  .intro {
+    border: none;
+    margin: auto;
+  }
+
+  .about {
+    padding-left: 0;
+    margin: auto;
+  }
+
+  section {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .portfolio-img {
+    display: flex;
+    margin: auto;
+  }
+
+  .profile-img {
+    padding-top: 1em;
+    padding-bottom: 10em;
+  }
 }
 
 /* projects section */
@@ -125,6 +166,7 @@ section {
 
 .description {
   text-align: center;
+  padding-bottom: 3em;
 }
 
 .portfolio-items {
@@ -171,7 +213,7 @@ button {
   border: 0;
   box-shadow: none;
   border-radius: 2px;
-  line-height: 2em;
+  line-height: 2.5em;
   cursor: pointer;
 }
 
