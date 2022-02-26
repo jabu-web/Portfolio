@@ -48,7 +48,13 @@ header {
 }
 
 ul {
-  background-color: var(--orange);
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -117,7 +123,7 @@ section {
   display: block;
   max-width: 200px;
   margin: auto;
-  padding-bottom: 16em;
+  padding-bottom: 17em;
 }
 
 @media (max-width: 900px) {
@@ -147,7 +153,7 @@ section {
 
   .profile-img {
     padding-top: 1em;
-    padding-bottom: 10em;
+    padding-bottom: 11em;
   }
 }
 
@@ -156,6 +162,7 @@ section {
 .section-title {
   text-align: center;
   padding-top: 1em;
+  color: var(--orange);
 }
 
 .section-title::after {
@@ -170,6 +177,7 @@ section {
 .description {
   text-align: center;
   padding-bottom: 3em;
+  color: var(--white);
 }
 
 .portfolio-items {
@@ -177,11 +185,18 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   max-width: 60em;
   margin: auto;
+  padding-bottom: 5em;
 }
 
 .portfolio-img {
   width: 20em;
   height: 20em;
+}
+
+#projects {
+  background-image: url(/img/bg.jpg);
+  background-size: cover;
+  min-width: 100%;
 }
 
 /* contact section */
@@ -221,5 +236,54 @@ button {
 }
 
 button:hover {
-  background-color: black;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+/* Scrollbar */
+
+@media (max-width: 400px) {
+  body {
+    overflow: visible;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  margin-block-start: 3.5em;
+  margin-block-end: 0.1em;
+  background: var(--white);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+body {
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
