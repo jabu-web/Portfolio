@@ -62,6 +62,7 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .nav-left {
@@ -100,6 +101,7 @@ li a {
 section {
   max-width: 1000px;
   margin: auto;
+  scroll-margin-top: 3em;
 }
 
 .home {
@@ -187,8 +189,6 @@ section {
   max-width: 60em;
   margin: auto;
   padding-bottom: 5em;
-  position: relative;
-  z-index: 2;
 }
 
 .portfolio-img {
